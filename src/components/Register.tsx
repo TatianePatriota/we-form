@@ -18,7 +18,6 @@ export function Register({ text, textLink }: RegisterType) {
       <StyledBanner>
         <BannerRegister />
       </StyledBanner>
-
       <StyledRegister>
         <h2>
           Cadastre sua <span>entidade</span> ou acesse dados
