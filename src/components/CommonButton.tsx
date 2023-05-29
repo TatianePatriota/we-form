@@ -7,17 +7,16 @@ type CommonButtontype = {
 
 export function CommonButton({ text, color }: CommonButtontype) {
   return (
-    <StyledCommonButton href="/">
+    <StyledCommonButton href="/" color={color}>
       {text}
-      {color}
     </StyledCommonButton>
   );
 }
 
-export const StyledCommonButton = styled.a`
+export const StyledCommonButton = styled.a<{ color: string }>`
   text-decoration: none;
   padding: 8px;
-  background-color: ${({ theme }) => theme.colors.lightGreen};
+  background-color: ${(props) => props.color};
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fonts.fontPoppins};
   display: block;
