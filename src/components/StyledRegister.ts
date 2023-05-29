@@ -2,11 +2,13 @@ import styled from "styled-components";
 
 export const StyledRegister = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.grey};
-  padding: 10px 50px;
-  width: 30%;
+  padding: 44px 57px;
   border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
 
   h2 {
+    margin-top: 0;
     font-size: ${({ theme }) => theme.font.gutter.large}px;
     font-family: ${({ theme }) => theme.fonts.fontRoboto};
     font-weight: 500;
@@ -33,6 +35,4 @@ export const StyledNewRegister = styled.div`
   }
 `;
 
-export const StyledBanner = styled.div`
-  width: 30%;
-`;
+export const StyledBanner = styled.div``;
