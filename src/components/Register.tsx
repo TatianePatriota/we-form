@@ -5,14 +5,9 @@ import {
   StyledNewRegister,
   StyledRegister,
 } from "./StyledRegister";
-import { CommonButton } from "./CommonButton";
+import { Button } from "./Button";
 
-type RegisterType = {
-  text: string;
-  textLink: string;
-};
-
-export function Register({ text, textLink }: RegisterType) {
+export function Register() {
   return (
     <StyledContentregister>
       <StyledBanner>
@@ -20,14 +15,14 @@ export function Register({ text, textLink }: RegisterType) {
       </StyledBanner>
       <StyledRegister>
         <h2>
-          Cadastre sua <span>entidade</span> ou acesse dados
-          <span>de parceiras</span>{" "}
+          Cadastre sua <span>entidade</span> ou acesse dados{" "}
+          <span>de parceiras</span>
         </h2>
-        <CommonButton text="Cadastrar entidade" color="#35E6E9" />
-        <CommonButton text="Ver entidades cadastradas" color="#FF5678" />
+        <Button>Cadastrar entidade</Button>
+        <Button variant="secondary">Ver entidades cadastradas</Button>
         <StyledNewRegister>
-          <p>{text}</p>
-          <a href="/">{textLink}</a>
+          <p>Sua entidade não se enquadra nos campos de atuação disponíveis?</p>
+          <a href="/">Registrar novo campo de atuação</a>
         </StyledNewRegister>
       </StyledRegister>
     </StyledContentregister>
@@ -36,6 +31,10 @@ export function Register({ text, textLink }: RegisterType) {
 
 const StyledContentregister = styled.div`
   display: flex;
-  justify-content: center;
-  padding-top: 200px;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  margin: 0 auto;
 `;
