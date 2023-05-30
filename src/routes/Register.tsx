@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { BannerRegister } from "./BannerRegister";
+import { BannerRegister } from "../components/BannerRegister";
 import {
   StyledBanner,
   StyledNewRegister,
   StyledRegister,
-} from "./StyledRegister";
-import { Button } from "./Button";
+} from "../components/StyledRegister";
+import { Button } from "../components/Button";
+import { Link } from "react-router-dom";
 
 export function Register() {
   return (
@@ -18,8 +19,12 @@ export function Register() {
           Cadastre sua <span>entidade</span> ou acesse dados{" "}
           <span>de parceiras</span>
         </h2>
-        <Button>Cadastrar entidade</Button>
-        <Button variant="secondary">Ver entidades cadastradas</Button>
+        <Link to="/register-entity">
+          <Button>Cadastrar entidade</Button>
+        </Link>
+        <Link to="/registered-entilities">
+          <Button variant="secondary">Ver entidades cadastradas</Button>
+        </Link>
         <StyledNewRegister>
           <p>Sua entidade não se enquadra nos campos de atuação disponíveis?</p>
           <a href="/">Registrar novo campo de atuação</a>
