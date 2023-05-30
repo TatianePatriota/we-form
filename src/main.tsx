@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
-
 import { theme } from "../Themes";
+import { RouterProvider } from "react-router-dom";
+import { router } from "../router.tsx";
 
 const GlobalStyles = createGlobalStyle`
     *, *::before, *::after {
@@ -15,7 +15,8 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <App />
+
+      <RouterProvider router={router} />
     </ThemeProvider>
   </React.StrictMode>
 );
