@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Button = styled.button<{ variant?: "primary" | "secondary" }>`
+export const Button = styled.button<{
+  variant?: "primary" | "secondary";
+}>`
   text-decoration: none;
   padding: 8px;
   background-color: ${({ variant, theme }) =>
