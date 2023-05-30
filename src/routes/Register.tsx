@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { BannerRegister } from "../components/BannerRegister";
 import {
-  StyledBanner,
   StyledNewRegister,
   StyledRegister,
 } from "../components/StyledRegister";
@@ -10,10 +9,9 @@ import { Link } from "react-router-dom";
 
 export function Register() {
   return (
-    <StyledContentregister>
-      <StyledBanner>
-        <BannerRegister />
-      </StyledBanner>
+    <StyledContentContainer>
+      <BannerRegister />
+
       <StyledRegister>
         <h2>
           Cadastre sua <span>entidade</span> ou acesse dados{" "}
@@ -27,14 +25,16 @@ export function Register() {
         </Link>
         <StyledNewRegister>
           <p>Sua entidade não se enquadra nos campos de atuação disponíveis?</p>
-          <a href="/">Registrar novo campo de atuação</a>
+          <Link to="/register-field">
+            <a href="/">Registrar novo campo de atuação</a>
+          </Link>
         </StyledNewRegister>
       </StyledRegister>
-    </StyledContentregister>
+    </StyledContentContainer>
   );
 }
 
-const StyledContentregister = styled.div`
+export const StyledContentContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   max-width: 1200px;
