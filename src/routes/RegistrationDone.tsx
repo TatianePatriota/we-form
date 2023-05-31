@@ -15,4 +15,5 @@ const StyledRegistrationDone = styled.div`
   font-size: ${({ theme }) => theme.font.size.default}px;
   font-weight: 600;
   text-align: center;
+  margin-top: 150px;
 `;
