@@ -8,6 +8,8 @@ import { router } from "../router.tsx";
 const GlobalStyles = createGlobalStyle`
     *, *::before, *::after {
       box-sizing: border-box;
+      overflow-y: hidden;
+
     }
 `;
 
