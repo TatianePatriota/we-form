@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledTitleWeForm = styled.div`
   line-height: 75px;
+  text-align: center;
   h1 {
     font-family: ${({ theme }) => theme.fonts.fontRoboto};
     color: ${({ theme }) => theme.colors.black};
